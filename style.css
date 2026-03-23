@@ -1,0 +1,114 @@
+/* Definição das cores e variáveis globais do projeto (Tema) */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #38bdf8;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Menu de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+.logo span { color: var(--accent-color); }
+
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 30px; }
+.nav-links a { 
+    text-decoration: none; color: var(--text-dim); 
+    font-size: 0.9rem; transition: var(--transition);
+}
+.nav-links a:hover { color: var(--accent-color); }
+
+.btn-contato {
+    background: var(--accent-color);
+    color: var(--bg-color) !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+.hero { height: 100vh; display: flex; align-items: center; padding-top: 80px; }
+.badge { color: var(--accent-color); background: rgba(56, 189, 248, 0.1); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+h1 { font-size: 4rem; margin: 15px 0; }
+h1 span { color: var(--accent-color); }
+.hero p { max-width: 600px; color: var(--text-dim); font-size: 1.1rem; }
+
+.section { padding: 100px 0; min-height: 80vh; }
+.section-title { font-size: 2rem; margin-bottom: 40px; position: relative; }
+.section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent-color); margin-top: 10px; }
+
+.card, .projeto-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+}
+.card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+
+/* Formulário */
+.form-wrapper { max-width: 500px; }
+.input-group { position: relative; margin-bottom: 30px; }
+.input-group input, .input-group textarea {
+    width: 100%; padding: 10px; background: transparent;
+    border: none; border-bottom: 2px solid var(--card-bg);
+    color: white; outline: none; font-size: 1rem;
+}
+.input-group label { position: absolute; left: 10px; top: 10px; color: var(--text-dim); pointer-events: none; transition: 0.3s; }
+
+/* Lógica de animação para os campos do formulário de contato */
+.input-group input:focus ~ label, .input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label, .input-group textarea:not(:placeholder-shown) ~ label {
+    top: -18px; font-size: 0.8rem; color: var(--accent-color);
+}
+
+button {
+    width: 100%; padding: 15px; background: var(--accent-color);
+    border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: var(--transition);
+}
+button:hover { opacity: 0.9; transform: scale(1.02); }
+
+footer { text-align: center; padding: 50px; color: var(--text-dim); border-top: 1px solid var(--card-bg); }
+.sub { font-size: 0.8rem; margin-top: 5px; }
+
+/* Área de Hobbies(Seção Sobre mim) */
+.hero .hobbies {
+    margin-top: 20px; 
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03); 
+    border-radius: 8px; 
+    border-left: 3px solid #38bdf8; 
+}
+
+.hero .hobbies p {
+    color: #94a3b8; 
+    font-size: 0.9rem; 
+    font-style: italic;
+}

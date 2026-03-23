@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humberto Anthony | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">H.A</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato" class="btn-contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="hero">
+            <div class="container">
+                <span class="badge">Estudante de Tecnologia</span>
+                <h1>Humberto <span>Anthony</span></h1>
+                <p>Estudante de engenharia de software na UNINTER. Focado em criar soluções digitais eficientes e apaixonado por tecnologia.</p>
+                <div class="hobbies">
+                <p>Hobbies: Gosto de praticar atividades físicas(academia e futebol),jogar jogos online e assistir séries e filmes</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacao" class="container section">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="card">
+                <h3>Engenharia de software</h3>
+                <p class="instituicao">Centro Universitário Internacional UNINTER</p>
+                <p>Desenvolvimento de competências em engenharia de software, bancos de dados e programação full-stack.</p>
+            </div>
+        </section>
+
+        <section id="portfolio" class="container section">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="grid-portfolio">
+                <div class="projeto-card">
+                    <h3>Portfólio para a matéria de Aplicação web e móveis.</h3>
+                    <a href="https://github.com/HumbertoAnthony" target="_blank">Ver no GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="container section">
+            <h2 class="section-title">Entre em contato comigo.</h2>
+            <div class="form-wrapper">
+                <form id="formContato">
+                    <div class="input-group">
+                        <input type="text" id="nome" required placeholder=" ">
+                        <label for="nome">Seu Nome</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="mensagem" required placeholder=" "></textarea>
+                        <label for="mensagem">Como posso ajudar?</label>
+                    </div>
+                    <button type="submit" id="btnEnviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Humberto Anthony Rodrigues Soares | RU: 5340750</p>
+        <p class="sub">FUNDAMENTOS DA PROGRAMAÇÃO WEB - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
