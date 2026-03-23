@@ -26,3 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 });
+
+// Lógica para alternar entre tema claro e escuro
+const btnTheme = document.getElementById('theme-toggle');
+const body = document.body;
+
+btnTheme.addEventListener('click', () => {
+    
+    body.classList.toggle('light-mode');
+
+    // verificando se o modo claro está ativo para mudar o texto do botão
+    if (body.classList.contains('light-mode')) {
+        btnTheme.textContent = "☀️ Claro";
+    } else {
+        btnTheme.textContent = "🌙 Escuro";
+    }
+});
