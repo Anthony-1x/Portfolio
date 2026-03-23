@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', function(e) {
         // Impede o recarregamento da página para processar a validação
-        e.preventDefault();/
+        e.preventDefault();
         
         // Captura de dados inseridos pelo usuário
         const nome = document.getElementById('nome').value.trim();
@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`✅ Sucesso, ${nome}!\nSua mensagem foi enviada com sucesso para o Humberto.`);
         form.reset();
     });
-});
 
         // Lógica para alternar entre tema claro e escuro
         const btnTheme = document.getElementById('theme-toggle');
@@ -41,4 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             btnTheme.textContent = "🌙 Escuro";
         }
-});
+    });
+});    
