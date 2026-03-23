@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', function(e) {
         // Impede o recarregamento da página para processar a validação
-        e.preventDefault();
+        e.preventDefault();/
+        
         // Captura de dados inseridos pelo usuário
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -27,18 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Lógica para alternar entre tema claro e escuro
-const btnTheme = document.getElementById('theme-toggle');
-const body = document.body;
+        // Lógica para alternar entre tema claro e escuro
+        const btnTheme = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        btnTheme.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
 
-btnTheme.addEventListener('click', () => {
-    
-    body.classList.toggle('light-mode');
-
-    // verificando se o modo claro está ativo para mudar o texto do botão
-    if (body.classList.contains('light-mode')) {
-        btnTheme.textContent = "☀️ Claro";
-    } else {
-        btnTheme.textContent = "🌙 Escuro";
-    }
+        // verificando se o modo claro está ativo para mudar o texto do botão
+        if (body.classList.contains('light-mode')) {
+            btnTheme.textContent = "☀️ Claro";
+        } else {
+            btnTheme.textContent = "🌙 Escuro";
+        }
 });
